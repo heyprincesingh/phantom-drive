@@ -1,7 +1,10 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
+import 'package:phantom_drive/alertscreen.dart';
+import 'package:phantom_drive/drive.dart';
 
 List<CameraDescription>? cameras;
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   cameras = await availableCameras();
@@ -11,7 +14,6 @@ void main() async {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -28,7 +30,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+        backgroundColor: Colors.black,
         appBar: AppBar(
           backgroundColor: Color(0xff151515),
           title: Text("Phantom Drive",
@@ -44,7 +46,12 @@ class HomeScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(15),
                 child: InkWell(
-                  onTap: (){},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => drive()),
+                    );
+                  },
                   customBorder: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
@@ -54,23 +61,22 @@ class HomeScreen extends StatelessWidget {
                     decoration: BoxDecoration(
                         color: Colors.white10,
                         border: Border.all(
-                            color: Color(0xffcd0000) /*Color(0xff1AC70B)*/,
+                            color: Color(0xffcd0000),
                             width: 2),
-                        borderRadius: BorderRadius.all(Radius.circular(20))
-                    ),
+                        borderRadius: BorderRadius.all(Radius.circular(20))),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Icon(
-                            Icons.drive_eta_rounded,
+                        Icon(Icons.drive_eta_rounded,
                             size: MediaQuery.of(context).size.width / 6,
-                            color: Colors.white
-                        ),
+                            color: Colors.white),
                         Text(
                           "Start Drive",
                           style: TextStyle(
-                              fontSize: 18, color: Colors.white, fontFamily: "Poppins"),
+                              fontSize: 18,
+                              color: Colors.white,
+                              fontFamily: "Poppins"),
                         )
                       ],
                     ),
@@ -89,7 +95,12 @@ class HomeScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     InkWell(
-                      onTap: (){},
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => audio()),
+                        );
+                      },
                       customBorder: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),
@@ -100,23 +111,23 @@ class HomeScreen extends StatelessWidget {
                             border: Border.all(
                                 color: Color(0xffcd0000) /*Color(0xff1AC70B)*/,
                                 width: 2),
-                            borderRadius: BorderRadius.all(Radius.circular(20))
-                        ),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(20))),
                         child: Padding(
                           padding: const EdgeInsets.all(10),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Icon(
-                                  Icons.crisis_alert,
+                              Icon(Icons.crisis_alert,
                                   size: MediaQuery.of(context).size.width / 8,
-                                  color: Colors.white
-                              ),
+                                  color: Colors.white),
                               Text(
                                 "SOS",
                                 style: TextStyle(
-                                    fontSize: 18, color: Colors.white, fontFamily: "Poppins"),
+                                    fontSize: 18,
+                                    color: Colors.white,
+                                    fontFamily: "Poppins"),
                               )
                             ],
                           ),
@@ -124,7 +135,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     InkWell(
-                      onTap: (){},
+                      onTap: () {},
                       customBorder: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),
@@ -135,23 +146,23 @@ class HomeScreen extends StatelessWidget {
                             border: Border.all(
                                 color: Color(0xffcd0000) /*Color(0xff1AC70B)*/,
                                 width: 2),
-                            borderRadius: BorderRadius.all(Radius.circular(20))
-                        ),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(20))),
                         child: Padding(
                           padding: const EdgeInsets.all(10),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Icon(
-                                  Icons.map_outlined,
+                              Icon(Icons.map_outlined,
                                   size: MediaQuery.of(context).size.width / 8,
-                                  color: Colors.white
-                              ),
+                                  color: Colors.white),
                               Text(
                                 "MAP",
                                 style: TextStyle(
-                                    fontSize: 18, color: Colors.white, fontFamily: "Poppins"),
+                                    fontSize: 18,
+                                    color: Colors.white,
+                                    fontFamily: "Poppins"),
                               )
                             ],
                           ),
@@ -163,7 +174,6 @@ class HomeScreen extends StatelessWidget {
               ),
             ],
           ),
-        )
-    );
+        ));
   }
 }
