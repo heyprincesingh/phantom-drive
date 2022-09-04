@@ -88,14 +88,13 @@ class _HomeState extends State<drive> {
             alertOpen = false;
           }
 
-          if (counter > 5 && isPlaying == false && alertOpen == false) {
+          if (counter > 50 && isPlaying == false && alertOpen == false) {
             audioPlayer.resume();
             alertOpen = true;
             showDialog(
                 context: context,
                 builder: (ctx) => Dialog(
                       backgroundColor: Colors.transparent,
-                      //title: Center(child: Text("Report")),
                       child: Container(
                         decoration: BoxDecoration(
                           color: Color(0xffcd0000),
