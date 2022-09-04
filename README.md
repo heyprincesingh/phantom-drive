@@ -2,7 +2,7 @@
 <body>
   <h1> <p align ="center">PHANTOM DRIVE</p> </h1>
   <br>
-  <p align ="center"><img src = https://c.tenor.com/-z2KfO5zAckAAAAC/hello-there-baby-yoda.gif height="200"></p>
+  
   <p align = left >
     <br>
     <br>
