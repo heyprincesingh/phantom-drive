@@ -1,7 +1,7 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
-import 'package:phantom_drive/alertscreen.dart';
 import 'package:phantom_drive/drive.dart';
+import 'package:phantom_drive/sos.dart';
 
 List<CameraDescription>? cameras;
 
@@ -98,7 +98,7 @@ class HomeScreen extends StatelessWidget {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => audio()),
+                          MaterialPageRoute(builder: (context) => sos()),
                         );
                       },
                       customBorder: RoundedRectangleBorder(
