@@ -12,8 +12,6 @@
     We used Google teachable machine trains the computer to recognize image sound and pose of the driver and Tensorflow lite is used to fetch the data, also converts and optimizes tensor flow models to run on mobile and edge devices. Our app analyses and interprets visual data,if the driver is sleeping or not.
     <br>
     <br>
-    
-
     <h3 align="center">SCREENSHOTS</h3>
     <br>
     <br>
