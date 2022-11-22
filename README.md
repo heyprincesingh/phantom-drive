@@ -1,7 +1,7 @@
 <html>   
 <body>
   <h1> <p align ="center">PHANTOM DRIVE</p> </h1>
-  <p align = left >
+  <p align = left>
     <h3 align="center">Problem</h3>
     It has been estimated that drowsiness causes between 10% to 20% of traffic accidents, causing both fatalities, deaths and injuries , whereas within the trucking industry 57% of fatal truck accidents are caused by this problem. In recent years, driver drowsiness has been one of the major causes of road accidents and can lead to severe physical injuries, deaths and significant losses. A driver who falls asleep at the wheel loses control of the vehicle, an action which often results in a crash with either another vehicle or stationary objects.
     <br>
